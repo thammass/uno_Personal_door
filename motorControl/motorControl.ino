@@ -45,7 +45,8 @@ const int AoutPosition = 9;
 //int ProxValue; // variable to read the value from the analog pin
 
 //---------- motor Control ---------
-#define DOOR 3
+// เปลี่ยนค่า DOOR เพื่อใช้ในการอัดโปรแกรม แต่ละประตู
+#define DOOR 1   
 #define vON 300
 #define usePROX 1
 
@@ -130,7 +131,7 @@ void setup() {
   Serial.begin(19200);
   // stepper.setSpeed(30);
 
-  switch (1) {
+  switch (DOOR) {   //โอ๋ request update  2021/07/19
     case 1: //door1
     
       POS90 = -60;
